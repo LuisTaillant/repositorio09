@@ -1,0 +1,27 @@
+{% extends 'padres/base.html' %} {% block mi_contenido %}
+
+<br />
+<h1 class="text-success text-center">Listado de personas</h1>
+<br />
+<section class="text-center">
+    <table class="table table-striped table-hover">
+        <thead class="bg-success text-white">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for persona in personas %}
+            <tr>
+                <td>{{persona.nombre}}</td>
+                <td>{{persona.apellido}}</td>
+                <td>{{persona.edad}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+{% endblock mi_contenido %}
